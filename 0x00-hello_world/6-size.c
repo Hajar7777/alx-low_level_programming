@@ -2,11 +2,7 @@
 /**
  *main - main entey paoint**description: counting size
  *
-<<<<<<< HEAD
  *Description: counting size of files of various types
-=======
- *Description: printing size of various types
->>>>>>> 5d3b16e6f8f178e634dda73a200d0e37e0b41278
  *
  *Return: Always 0(Success)
  */
