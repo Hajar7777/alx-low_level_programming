@@ -4,8 +4,6 @@
  *
  *Description: printing size of various types
  *
- *description: counting size
- *
  *Return: Always 0(Success)
  */
 int main(void)
