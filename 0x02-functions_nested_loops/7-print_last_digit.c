@@ -4,12 +4,14 @@
 *
 * @m : integer
 *
-* Return : returns the value of last digit
+* Return : l
 */
 int print_last_digit(int m)
 {
-	int l = m % 10;
+	int l;
 
-	_putchar(l);
+	l = m % 10;
+
+	_putchar(l + 48);
 	return (l);
 }
