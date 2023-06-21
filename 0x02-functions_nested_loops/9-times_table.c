@@ -1,12 +1,11 @@
 #include "main.h"
 /**
-* times_tables - Prints 9 times table, starting with 0.
+* times_tables - Prints the 9 times table, starting with 0.
 *
-* Description : printing times table of integer 9
-*
-* Return: Always 0(Success)
+* Return: empty output
 */
 void times_table(void)
+
 {
 	int a, b, c, d, e;
 
