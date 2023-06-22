@@ -1,7 +1,11 @@
 #include <ctype.h>
+#include <unistd.h>
+#include "unistd.h"
 #include "main.h"
 /**
-* _isupper - Checks for upper case chars
+* _isupper - checks for uppercase character.
+*
+* _putchar - writes the character c to stdout
 *
 * @c : ASCII char
 *
