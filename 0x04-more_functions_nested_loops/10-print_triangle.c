@@ -1,11 +1,11 @@
 #include "main.h"
 /**
-  * print_triangle - prints a triangle followed by a new line.
-  *
-  * @size : number of triangles/ number of lines
-  *
-  * Return : empty
-  */
+* print_triangle - prints a triangle followed by a new line.
+*
+* @size : number of triangles/ number of lines
+*
+* Return : empty
+*/
 void print_triangle(int size)
 {
 	int x, v, k;
@@ -18,7 +18,7 @@ void print_triangle(int size)
 	{
 	for (x = 0; x < size; x++)
 	{
-	for (v == size - x; v > 1; v--)
+	for (v = size - x; v > 1; v--)
 	{
 	_putchar(32);
 	}
