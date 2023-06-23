@@ -1,4 +1,3 @@
-#include "main.h"
 #include <stdio.h>
 /**
   * main - print a Fizz Buzz progress
