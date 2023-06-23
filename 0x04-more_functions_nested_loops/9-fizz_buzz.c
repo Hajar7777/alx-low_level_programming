@@ -1,9 +1,9 @@
 #include <stdio.h>
 /**
-  * main - print a Fizz Buzz progress
-  *
-  * Return: Always 0(Success)
-  */
+* main - Fizz Buzz test
+*
+* Return: Always 0(Success)
+*/
 int main(void)
 {
 	int x;
@@ -32,4 +32,5 @@ int main(void)
 	}
 	}
 	printf("\n");
+	return (0);
 }
