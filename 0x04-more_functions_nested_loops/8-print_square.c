@@ -2,7 +2,7 @@
 /**
 * print_square - prints a square
 *
-* size : size of squares
+* @size : number of squares/number of lines
 *
 * return: empty
 */
@@ -12,14 +12,17 @@ void print_square(int size)
 
 	if (size <= 0)
 	{
-		_putchar('\n');
-		for (x = 0; x < size; x++)
-		{
-			for (y = 0; y < size; y++)
-			{
-				_putchar(35);
-			}
-			_putchar('\n');
-		}
+	_putchar('\n');
+	}
+	else
+	{
+	for (x = 0; x < size; x++)
+	{
+	for (y = 0; y < size; y++)
+	{
+	_putchar(35);
+	}
+	_putchar('\n');
+	}
 	}
 }
