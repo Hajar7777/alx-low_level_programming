@@ -7,8 +7,9 @@
 *
 * @dest : char pointer to destination input
 *
-* return: @dest
+* Return: a pointer to the resulting string dest
 */
+
 char *_strcat(char *dest, char *src)
 {
 	int i, i1;
@@ -19,7 +20,9 @@ char *_strcat(char *dest, char *src)
 		i++;
 
 	for (i1 = 0; src[i1]; i1++)
-		dest[i++] = src[i1++];
+
+		dest[i] = src[i1++];
+	i++;
 
 	return (dest);
 }
