@@ -24,5 +24,6 @@ char *leet(char *c)
 		}
 		c++;
 	}
+
 	return (cp);
 }
