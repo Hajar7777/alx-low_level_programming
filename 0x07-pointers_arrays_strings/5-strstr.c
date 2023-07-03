@@ -2,9 +2,9 @@
 /**
 * _strstr - function that locates a substring
 *
-* @haystack : pointer
+* @haystack : input
 *
-* @needle : pointer
+* @needle : input
 *
 * Return: always 0(Success)
 */
@@ -12,15 +12,15 @@ char *_strstr(char *haystack, char *needle)
 {
 	for (; *haystack != '\0'; haystack++)
 	{
-		char *first = haystack;
-		char *second = needle;
+		char *a = haystack;
+		char *b = needle;
 
-		while (*first = *second && *second != '\0')
+		while (*a = *b && *b != '\0')
 		{
-			first++;
-			second++;
+			a++;
+			b++;
 		}
-		if (*second == '\0')
+		if (*b == '\0')
 			return (haystack);
 	}
 	return (0);
