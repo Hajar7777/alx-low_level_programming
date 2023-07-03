@@ -6,8 +6,7 @@
 *
 * @needle : pointer
 *
-* Return: Returns a pointer to the beginning of the located substring
-* or 0 if the substring is not found
+* Return: always 0(Success)
 */
 char *_strstr(char *haystack, char *needle)
 {
