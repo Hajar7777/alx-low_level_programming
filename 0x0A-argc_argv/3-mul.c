@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 /**
-* main - entry point
+* main -  program that multiplies two numbers
 *
 * @argc : int
 * @argv : pointer
