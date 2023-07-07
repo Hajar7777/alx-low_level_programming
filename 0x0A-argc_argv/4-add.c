@@ -1,5 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include "main.h"
+#include <string.h>
 /**
 * main - entry point
 *
@@ -10,16 +12,31 @@
 */
 int main(int argc, char *argv[])
 {
-	int m = 0;
+	int i;
+	unsigned int k, m = 0;
 	char *c;
 
-	while (--argc)
+	if (argc > 1)
 	{
-		for (c = argv[argc]; *c; c++)
-			if (*c < '0' || *c < '9')
-				return (printf("Error\n"), 1);
-		m += atoi(argv[argc]);
+		for (i = 1; i < argc; i++)
+		{
+			c = argv[i];
+			for (k = 0; k < strlen(c); k++)
+			{
+				if (c[k] < 48 || c[k] > 57)
+				{
+					printf("Error\n");
+					return (1);
+				}
+			}
+			m += atoi(c);
+			c++;
+		}
+		printf("%d\n", m);
 	}
-	printf("%d\n", m);
+	else
+	{
+		printf("0\n");
+	}
 	return (0);
 }
