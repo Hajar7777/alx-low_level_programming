@@ -1,14 +1,16 @@
 #include "main.h"
 #include <stdlib.h>
 /**
- * argstostr - main entry
- * @ac: int input
- * @av: double pointer array
- * Return: 0
- */
+* argstostr - main entry
+*
+* @ac: int input
+* @av: double pointer array
+*
+* Return: 0
+*/
 char *argstostr(int ac, char **av)
 {
-	int i, n, r = 0, l = 0;
+	int i, m, r = 0, j = 0;
 	char *str;
 
 	if (ac == 0 || av == NULL)
@@ -16,19 +18,19 @@ char *argstostr(int ac, char **av)
 
 	for (i = 0; i < ac; i++)
 	{
-		for (n = 0; av[i][n]; n++)
-			l++;
+		for (m = 0; av[i][m]; m++)
+			j++;
 	}
-	l += ac;
+	j += ac;
 
-	str = malloc(sizeof(char) * l + 1);
+	str = malloc(sizeof(char) * j + 1);
 	if (str == NULL)
 		return (NULL);
 	for (i = 0; i < ac; i++)
 	{
-	for (n = 0; av[i][n]; n++)
+	for (m = 0; av[i][m]; m++)
 	{
-		str[r] = av[i][n];
+		str[r] = av[i][m];
 		r++;
 	}
 	if (str[r] == '\0')
