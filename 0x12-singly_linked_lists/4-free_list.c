@@ -3,9 +3,9 @@
 
 
 /**
-* free_list - frees a linked list
+* free_list - FRees linked list
 *
-* @head: list_t list to be freed
+* @head: list_t list to free
 */
 void free_list(list_t *head)
 {
