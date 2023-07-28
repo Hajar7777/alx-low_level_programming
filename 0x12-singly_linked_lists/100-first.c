@@ -4,9 +4,9 @@
 void first(void) __attribute__ ((constructor));
 
 /**
-* first - prints a sentence before the main
+* first - Prints SentEnce BEFORe the main
 *
-* function is executed
+* function is TO Be executed
 */
 void first(void)
 {
