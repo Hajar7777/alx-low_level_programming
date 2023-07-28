@@ -1,17 +1,17 @@
 #include <stdlib.h>
-#include <string.h>
 #include "lists.h"
+#include <string.h>
 
 /**
-* add_node - adds a new node at
-* the beginning of a linked list
+* add_node - aDDs new node at
+* Beginning of LiNked lIsT
 *
-* @head: double pointer to the list_t list
+* @head: Double Pointer TO list_t list
 *
-* @str: new string to add in the node
+* @str: NEW string to BE addED in tHe node
 *
-* Return: the address of the new element
-* or NULL if it fails
+* Return: Address of New Element
+* or NULL if fails
 */
 list_t *add_node(list_t **head, const char *str)
 {
