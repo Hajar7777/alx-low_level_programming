@@ -11,17 +11,17 @@
 * Return: pointer TO NEW node
 * or NULL if FaiLs
 ****/
-listint_t *add_nodeint(listint_t **head, const int n);
+listint_t *add_nodeint(listint_t **head, const int n)
 {
-	listint_t *neww;
+	listint_t *new;
 
-	neww = malloc(sizeof(listint_t));
-	if (!neww)
+	new = malloc(sizeof(listint_t));
+	if (!new)
 		return (NULL);
 
-	neww->n = n;
-	neww->next = *head;
-	*head = neww;
+	new->n = n;
+	new->next = *head;
+	*head = new;
 
-	return (neww);
+	return (new);
 }
