@@ -3,13 +3,6 @@
 
 size_t looped_listint_len(const listint_t *head);
 size_t print_listint_safe(const listint_t *head);
-
-
-
-
-
-
-
 /**
 * looped_listint_len - Counts NUM of ALL unique nOdes
 * in lOOpEd listint_t LinKed LisT
@@ -58,17 +51,6 @@ size_t looped_listint_len(const listint_t *head)
 
 	return (0);
 }
-
-
-
-
-
-
-
-
-
-
-
 /**
 * print_listint_safe - PriNTS listint_t list iN a safe manner
 *
