@@ -1,89 +1,73 @@
 #include "lists.h"
-#include <stdio.h>
 
 
-size_t looped_listint_len(const listint_t *head);
-size_t print_listint_safe(const listint_t *head);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /**
-* looped_listint_len - Counts NUM of ALL unique nOdes
-* in lOOpEd listint_t LinKed LisT
+* free_listint_safe - frEES a Linked List
 *
-* @head: Pointer TO Head of tHe listint_t TO checK
+* @h: Pointer to 1st nOde in LinKed LIst
 *
-* Return: IF tHe LiSt is NOT lOOpEd 0
-* Otherwis NUM of unique nodEs in tHe lisT
+* Return: NUM of ElEmEnts in FreEd LiSt
 */
-size_t looped_listint_len(const listint_t *head)
+size_t free_listint_safe(listint_t **h)
 {
-	const listint_t *tortois, *rabbit;
-	size_t nodes = 1;
+	size_t lentie = 0;
+	int diff;
+	listint_t *tempee;
 
-	if (head == NULL || head->next == NULL)
+	if (!h || !*h)
 		return (0);
-
-	tortois = head->next;
-	rabbit = (head->next)->next;
-
-	while (rabbit)
+	while (*h)
 	{
-		if (tortois == rabbit)
+		diff = *h - (*h)->next;
+		if (diff > 0)
 		{
-			tortois = head;
-			while (tortois != rabbit)
-			{
-				nodes++;
-				tortois = tortois->next;
-				rabbit = rabbit->next;
-			}
-
-			tortois = tortois->next;
-			while (tortois != rabbit)
-			{
-				nodes++;
-				tortois = tortois->next;
-			}
-
-			return (nodes);
+			tempee = (*h)->next;
+			free(*h);
+			*h = tempee;
+			lentie++;
 		}
-
-		tortois = tortois->next;
-		rabbit = (rabbit->next)->next;
-	}
-
-	return (0);
-}
-/**
-* print_listint_safe - PriNTS listint_t list iN a safe manner
-*
-* @head: POInter to HeaD of listint_t list.
-*
-* Return: NUM of nodes in the list.
-*/
-size_t print_listint_safe(const listint_t *head)
-{
-	size_t nodes, index = 0;
-
-	nodes = looped_listint_len(head);
-
-	if (nodes == 0)
-	{
-		for (; head != NULL; nodes++)
+		else
 		{
-			printf("[%p] %d\n", (void *)head, head->n);
-			head = head->next;
+			free(*h);
+			*h = NULL;
+			lentie++;
+			break;
 		}
 	}
-
-	else
-	{
-		for (index = 0; index < nodes; index++)
-		{
-			printf("[%p] %d\n", (void *)head, head->n);
-			head = head->next;
-		}
-
-		printf("-> [%p] %d\n", (void *)head, head->n);
-	}
-
-	return (nodes);
+	*h = NULL;
+	return (lentie);
 }
