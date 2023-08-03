@@ -1,16 +1,80 @@
-#include <unistd.h>
 #include "main.h"
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /**
-* _putchar - WriTes CHAR c tO stdout
+* print_binary - prints BINARY equivalnt of DEC NUM
 *
-* @c: CHAR to BE  printED
-*
-* Return: SUcceSs 1
-* ERROR -1 and errno is TO BE set apprOpriately
+* @n: unsi long int NUM to BE printED in binaRy
 */
-int _putchar(char c)
+void print_binary(unsigned long int n)
 {
-	return (write(1, &c, 1));
+	int ika, count = 0;
+	unsigned long int current;
+
+	for (ika = 63; ika >= 0; ika--)
+	{
+		current = n >> ika;
+
+		if (current & 1)
+		{
+			_putchar('1');
+			count++;
+		}
+		else if (count)
+			_putchar('0');
+	}
+	if (!count)
+		_putchar('0');
 }
